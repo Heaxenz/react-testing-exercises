@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should create a card with the given parameters 1`] = `
+<DocumentFragment>
+  <div
+    class="Card"
+  >
+    <h4
+      class="Card-title"
+    >
+      Hello
+    </h4>
+    <img
+      alt="Hello"
+      class="Card-image"
+      src="http://localhost:3000/static/media/image1.08e1519e765278b10548.jpg"
+    />
+    <small
+      class="Card-small"
+    >
+      Image  of .
+    </small>
+  </div>
+</DocumentFragment>
+`;

@@ -9,7 +9,7 @@ import "./Card.css";
  * - currNum: integer for what image we're on
  * - totalNum: integer for how many images are in the collection
  * 
- * State:
+ * State: 
  * - none
  * 
  * App --> Carousel --> Card

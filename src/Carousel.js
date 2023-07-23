@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Carousel.css";
 import Card from "./Card";
+import photos from "./photos";
 
 
 /** Carousel: displays images and arrows to navigate through them
@@ -21,8 +22,16 @@ import Card from "./Card";
   const total = photos.length;
 
   //Increments currCardIdx state by 1
+  //help hiding if on the last or first photos
   function goForward() {
+    if(currCardIdx === photos[-1]){
+      document.getElementsByClassName('bi-arrow-right-circle').style=({ display: 'none'})
+    }
     setCurrCardIdx(currCardIdx + 1);
+  }
+
+  function goBackward() {
+    setCurrCardIdx(currCardIdx - 1);
   }
 
   return (
@@ -31,7 +40,7 @@ import Card from "./Card";
       <div className="Carousel-main">
         <i
           className="bi bi-arrow-left-circle"
-          onClick={goForward}
+          onClick={goBackward}
         />
         <Card
           caption={currCard.caption}
