@@ -24,14 +24,15 @@ import photos from "./photos";
   //Increments currCardIdx state by 1
   //help hiding if on the last or first photos
   function goForward() {
-    if(currCardIdx === photos[-1]){
-      document.getElementsByClassName('bi-arrow-right-circle').style=({ display: 'none'})
-    }
-    setCurrCardIdx(currCardIdx + 1);
+    if(currCardIdx === total -1){
+      setCurrCardIdx(currCardIdx)
+    } else setCurrCardIdx(currCardIdx + 1);
   }
 
   function goBackward() {
-    setCurrCardIdx(currCardIdx - 1);
+    if(currCardIdx === 0){
+    setCurrCardIdx(0)
+    } else setCurrCardIdx(currCardIdx - 1);
   }
 
   return (
